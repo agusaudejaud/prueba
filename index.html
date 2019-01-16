@@ -13,7 +13,7 @@
 <script type="text/javascript">
  var token = '1371961479.4f9b81b.857de5dd34164edbaef1e2abf943ef86', // learn how to obtain it below
     userid = 1371961479, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
-    num_photos = 4; // how much photos do you want to get
+    num_photos =6; // how much photos do you want to get
  
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
@@ -23,14 +23,14 @@ $.ajax({
 	success: function(data){
  		console.log(data);
 		for( x in data.data ){
-			$('ul').append('<li><img src="'+data.data[x].caption.text+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
+			$('ul').append('<li><img src="'+data.data[x].images.standard_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
 			// data.data[x].images.thumbnail.url - URL of image 150х150
 			// data.data[x].images.standard_resolution.url - URL of image 612х612
 			// data.data[x].link - Instagram post URL 
 			
 			//data.data[x].images.low_resolution.url
-			//data.data[x].images.standard_resolution.url
-			console.log('holis')
+			//
+			console.log(data.data[3].caption.text)
 		}
 	},
 	error: function(data){
