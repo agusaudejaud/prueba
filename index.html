@@ -23,9 +23,9 @@ $.ajax({
 	success: function(data){
  		console.log(data);
 		for( x in data.data ){
-			$('ul').append('<li><img src="'+data.data[x].images.standard_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
+			$('ul').append('<li><img src="'+data.data[x].images.standard_resolution.url+'"></li> <li><p>data.data[x].caption.text</p></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
 			// data.data[x].images.thumbnail.url - URL of image 150х150
-			$('.e').html(data.data[x].caption.text);
+			
 			// data.data[x].images.standard_resolution.url - URL of image 612х612
 			// data.data[x].link - Instagram post URL 
 			
@@ -40,8 +40,7 @@ $.ajax({
 });;
 </script>
 	<ul id="rudr_instafeed"></ul>
-	<p class="e" ></p>
-	<p class="e" d="rudr_instafeed" ></p>
+
 	<script src="a.min.js"></script>
 </body>
 </html>
