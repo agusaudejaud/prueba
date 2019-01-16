@@ -25,7 +25,7 @@ $.ajax({
 		for( x in data.data ){
 			$('.i').append('<li><img src="'+data.data[x].images.standard_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
 			// data.data[x].images.thumbnail.url - URL of image 150х150
-			$('.e').html(data.caption.text)
+			$('.e').html(data.data[2].caption.text)
 			// data.data[x].images.standard_resolution.url - URL of image 612х612
 			// data.data[x].link - Instagram post URL 
 			
